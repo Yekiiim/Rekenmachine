@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekenmachine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+      <!-- Scherm -->
+      <input type="text" id="display" readonly>
+      <div class="buttons">
+        <!-- Rij 1: Wissen, delen, keer en backspace -->
+        <button class="buttonclear" onclick="clearDisplay()">C</button>
+        <button onclick="appendValue('/')">÷</button>
+        <button onclick="appendValue('*')">×</button>
+        <button onclick="deleteChar()">⌫</button>
+        <!-- Rij 2: 7, 8, 9, min -->
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('-')">-</button>
+        <!-- Rij 3: 4, 5, 6, plus -->
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendValue('+')">+</button>
+        <!-- Rij 4: 1, 2, 3, equals -->
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="buttonequal" onclick="calculateResult()">=</button>
+        <!-- Rij 5: 0 en komma-->
+        <button class="buttonzero" onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
